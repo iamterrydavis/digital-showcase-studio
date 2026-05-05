@@ -20,9 +20,9 @@ export const ShowcaseFrame = ({ themeClass, subdomain, title, children }: Props)
         <div className="bg-foreground/95 text-background text-xs">
           <div className="container flex items-center justify-between h-9">
             <Link to="/" className="inline-flex items-center gap-2 hover:opacity-80 transition-opacity">
-              <ArrowLeft className="h-3.5 w-3.5" /> Back to Studio Lumen
+              <ArrowLeft className="h-3.5 w-3.5" /> Tillbaka till Tage's Hemsidor
             </Link>
-            <span className="opacity-70 hidden sm:inline">Live demo · {subdomain}</span>
+            <span className="opacity-70 hidden sm:inline">Demo · {subdomain}</span>
           </div>
         </div>
         {children}

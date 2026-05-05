@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Code2, Gauge, Palette, Smartphone, Sparkles, CheckCircle2 } from "lucide-react";
-import heroImg from "@/assets/portfolio-hero.jpg";
+import { ArrowRight } from "lucide-react";
 import restaurantImg from "@/assets/restaurant-hero.jpg";
 import mechanicImg from "@/assets/mechanic-hero.jpg";
 import storeImg from "@/assets/store-hero.jpg";
@@ -9,103 +8,92 @@ import cafeImg from "@/assets/cafe-hero.jpg";
 import { useEffect } from "react";
 
 const showcases = [
-  { slug: "restaurant", name: "Bella Notte", tag: "Fine Dining", img: restaurantImg, desc: "Elegant restaurant site with menu, reservations and ambiance gallery." },
-  { slug: "mechanic", name: "Apex Auto", tag: "Auto Repair", img: mechanicImg, desc: "Bold service-led layout with booking, pricing and trust signals." },
-  { slug: "store", name: "Maison Modern", tag: "Retail Store", img: storeImg, desc: "Editorial e-commerce feel with clean product storytelling." },
-  { slug: "cafe", name: "Ember & Oak", tag: "Specialty Cafe", img: cafeImg, desc: "Warm, inviting cafe brand with menu, story and visit info." },
+  { slug: "restaurant", name: "Bella Notte", tag: "Restaurang", img: restaurantImg, desc: "Elegant restaurangsida med meny och bordsbokning." },
+  { slug: "mechanic", name: "Apex Bilverkstad", tag: "Bilverkstad", img: mechanicImg, desc: "Tydlig sida med tjänster, prislista och tidsbokning." },
+  { slug: "store", name: "Maison Modern", tag: "Butik", img: storeImg, desc: "Ren e-handelsdesign med fokus på produkterna." },
+  { slug: "cafe", name: "Ember & Oak", tag: "Café", img: cafeImg, desc: "Varm och välkomnande caféprofil med meny och info." },
 ];
 
 const services = [
-  { icon: Palette, title: "Custom Design", text: "Brand-aligned visuals tailored to your audience and goals." },
-  { icon: Code2, title: "Modern Build", text: "Fast, accessible React sites built on production-grade tech." },
-  { icon: Smartphone, title: "Fully Responsive", text: "Pixel-perfect on phones, tablets and large displays." },
-  { icon: Gauge, title: "Performance First", text: "Optimized imagery, lazy loading and 90+ Lighthouse scores." },
+  { title: "Skräddarsydd design", text: "Unik design som speglar ditt varumärke och dina kunder." },
+  { title: "Snabb och modern", text: "Byggd med modern teknik för bästa prestanda och SEO." },
+  { title: "Mobilanpassad", text: "Fungerar perfekt på mobil, surfplatta och dator." },
+  { title: "Klar på två veckor", text: "Från första samtal till färdig sida — utan krångel." },
 ];
 
 const Index = () => {
   useEffect(() => {
-    document.title = "Studio Lumen — Custom Websites for Modern Businesses";
+    document.title = "Tage's Hemsidor — Hemsidor för småföretag";
   }, []);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Nav */}
-      <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-background/60 border-b border-border">
+      <header className="sticky top-0 inset-x-0 z-50 bg-background/90 backdrop-blur border-b border-border">
         <div className="container flex items-center justify-between h-16">
-          <a href="#top" className="flex items-center gap-2 font-semibold tracking-tight">
-            <span className="h-8 w-8 rounded-lg bg-hero-gradient shadow-glow" />
-            Studio Lumen
-          </a>
+          <a href="#top" className="font-semibold tracking-tight text-lg">Tage's Hemsidor</a>
           <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
-            <a href="#work" className="hover:text-foreground transition-smooth">Work</a>
-            <a href="#services" className="hover:text-foreground transition-smooth">Services</a>
+            <a href="#arbeten" className="hover:text-foreground transition-smooth">Arbeten</a>
+            <a href="#tjanster" className="hover:text-foreground transition-smooth">Tjänster</a>
             <a href="#process" className="hover:text-foreground transition-smooth">Process</a>
-            <a href="#contact" className="hover:text-foreground transition-smooth">Contact</a>
+            <a href="#kontakt" className="hover:text-foreground transition-smooth">Kontakt</a>
           </nav>
-          <Button asChild size="sm" className="bg-hero-gradient border-0 hover:opacity-90 shadow-glow">
-            <a href="#contact">Start a project</a>
+          <Button asChild size="sm">
+            <a href="#kontakt">Kom igång</a>
           </Button>
         </div>
       </header>
 
       {/* Hero */}
-      <section id="top" className="relative pt-32 pb-24 overflow-hidden">
-        <img src={heroImg} alt="" width={1600} height={1024}
-          className="absolute inset-0 w-full h-full object-cover opacity-30" />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/70 to-background" />
-        <div className="container relative">
-          <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary border border-border text-xs text-muted-foreground">
-              <Sparkles className="h-3.5 w-3.5 text-primary" /> Independent web studio
-            </span>
-            <h1 className="mt-6 text-5xl md:text-7xl font-bold tracking-tight leading-[1.05]">
-              Beautiful websites that <span className="text-gradient">grow your business</span>.
-            </h1>
-            <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl">
-              I design and build fast, modern websites for restaurants, shops, services and ambitious local brands. Below are four live examples — explore them like a real customer would.
-            </p>
-            <div className="mt-10 flex flex-wrap gap-4">
-              <Button asChild size="lg" className="bg-hero-gradient border-0 hover:opacity-90 shadow-glow">
-                <a href="#work">View live demos <ArrowRight className="ml-2 h-4 w-4" /></a>
-              </Button>
-              <Button asChild size="lg" variant="outline">
-                <a href="#contact">Get a quote</a>
-              </Button>
-            </div>
+      <section id="top" className="py-24 md:py-32 border-b border-border">
+        <div className="container max-w-3xl">
+          <p className="text-sm uppercase tracking-widest text-muted-foreground mb-6">Frilansande webbutvecklare</p>
+          <h1 className="text-4xl md:text-6xl font-semibold tracking-tight leading-[1.1]">
+            Snygga hemsidor för småföretag som vill växa.
+          </h1>
+          <p className="mt-6 text-lg text-muted-foreground max-w-2xl">
+            Jag designar och bygger enkla, snabba och professionella hemsidor. Nedan hittar du fyra exempel — klicka runt som en riktig kund.
+          </p>
+          <div className="mt-10 flex flex-wrap gap-3">
+            <Button asChild size="lg">
+              <a href="#arbeten">Se exempel <ArrowRight className="ml-2 h-4 w-4" /></a>
+            </Button>
+            <Button asChild size="lg" variant="outline">
+              <a href="#kontakt">Begär offert</a>
+            </Button>
           </div>
         </div>
       </section>
 
       {/* Showcase grid */}
-      <section id="work" className="py-24 border-t border-border">
+      <section id="arbeten" className="py-24 border-b border-border">
         <div className="container">
-          <div className="flex items-end justify-between flex-wrap gap-4 mb-14">
+          <div className="flex items-end justify-between flex-wrap gap-4 mb-12">
             <div>
-              <p className="text-sm uppercase tracking-widest text-primary mb-3">Live demos</p>
-              <h2 className="text-4xl md:text-5xl font-bold tracking-tight">Selected work</h2>
+              <p className="text-sm uppercase tracking-widest text-muted-foreground mb-3">Exempel</p>
+              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">Utvalda arbeten</h2>
             </div>
             <p className="max-w-md text-muted-foreground">
-              Each demo is a fully functional site — feel free to click around. Built specifically to show what's possible for your industry.
+              Varje exempel är en fullt fungerande sida — klicka in och utforska.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-6">
             {showcases.map((s) => (
               <Link key={s.slug} to={`/showcase/${s.slug}`}
-                className="group relative overflow-hidden rounded-2xl border border-border bg-card shadow-card-soft transition-smooth hover:-translate-y-1 hover:shadow-glow">
-                <div className="aspect-[16/10] overflow-hidden">
-                  <img src={s.img} alt={s.name} loading="lazy" width={1600} height={1024}
-                    className="w-full h-full object-cover transition-smooth group-hover:scale-105" />
+                className="group block rounded-lg border border-border bg-card overflow-hidden transition-smooth hover:border-foreground/30">
+                <div className="aspect-[16/10] overflow-hidden bg-secondary">
+                  <img src={s.img} alt={s.name} loading="lazy" width={1600} height={1000}
+                    className="w-full h-full object-cover transition-smooth group-hover:scale-[1.02]" />
                 </div>
                 <div className="p-6">
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs uppercase tracking-widest text-primary">{s.tag}</span>
-                    <span className="text-xs text-muted-foreground">{s.slug}.studiolumen.com</span>
+                  <div className="flex items-center justify-between text-xs text-muted-foreground">
+                    <span className="uppercase tracking-widest">{s.tag}</span>
+                    <span>{s.slug}.tageshemsidor.se</span>
                   </div>
-                  <h3 className="mt-2 text-2xl font-semibold">{s.name}</h3>
-                  <p className="mt-2 text-muted-foreground">{s.desc}</p>
-                  <span className="mt-4 inline-flex items-center text-sm font-medium text-primary">
-                    Visit demo <ArrowRight className="ml-1 h-4 w-4 transition-smooth group-hover:translate-x-1" />
+                  <h3 className="mt-3 text-xl font-semibold">{s.name}</h3>
+                  <p className="mt-2 text-sm text-muted-foreground">{s.desc}</p>
+                  <span className="mt-4 inline-flex items-center text-sm font-medium">
+                    Besök demo <ArrowRight className="ml-1 h-4 w-4 transition-smooth group-hover:translate-x-1" />
                   </span>
                 </div>
               </Link>
@@ -115,19 +103,16 @@ const Index = () => {
       </section>
 
       {/* Services */}
-      <section id="services" className="py-24 border-t border-border bg-subtle-gradient">
+      <section id="tjanster" className="py-24 border-b border-border">
         <div className="container">
           <div className="max-w-2xl">
-            <p className="text-sm uppercase tracking-widest text-primary mb-3">What I do</p>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">Everything you need, nothing you don't.</h2>
+            <p className="text-sm uppercase tracking-widest text-muted-foreground mb-3">Vad jag gör</p>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">Allt du behöver, inget extra.</h2>
           </div>
-          <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map(({ icon: Icon, title, text }) => (
-              <div key={title} className="p-6 rounded-2xl border border-border bg-card transition-smooth hover:border-primary/50">
-                <div className="h-11 w-11 rounded-xl bg-hero-gradient grid place-items-center shadow-glow">
-                  <Icon className="h-5 w-5 text-primary-foreground" />
-                </div>
-                <h3 className="mt-5 font-semibold text-lg">{title}</h3>
+          <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map(({ title, text }) => (
+              <div key={title} className="p-6 rounded-lg border border-border bg-card">
+                <h3 className="font-semibold">{title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground">{text}</p>
               </div>
             ))}
@@ -136,28 +121,25 @@ const Index = () => {
       </section>
 
       {/* Process */}
-      <section id="process" className="py-24 border-t border-border">
+      <section id="process" className="py-24 border-b border-border">
         <div className="container grid lg:grid-cols-2 gap-16">
           <div>
-            <p className="text-sm uppercase tracking-widest text-primary mb-3">Process</p>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">From idea to launch in two weeks.</h2>
+            <p className="text-sm uppercase tracking-widest text-muted-foreground mb-3">Process</p>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">Från idé till lansering på två veckor.</h2>
             <p className="mt-6 text-muted-foreground max-w-md">
-              A clear, no-nonsense workflow with weekly check-ins. You stay in the loop without lifting a finger.
+              Tydligt arbetssätt med veckovisa avstämningar. Du har koll utan att lyfta ett finger.
             </p>
           </div>
-          <ol className="space-y-6">
+          <ol className="space-y-4">
             {[
-              ["01 — Discovery", "We talk goals, audience and the vibe you want."],
-              ["02 — Design", "I build a unique mockup tailored to your brand."],
-              ["03 — Build", "Production-ready code, content and integrations."],
-              ["04 — Launch", "Domain, hosting and SEO setup. Then we go live."],
+              ["01 — Möte", "Vi pratar mål, målgrupp och känsla."],
+              ["02 — Design", "Jag tar fram en unik skiss anpassad efter ditt varumärke."],
+              ["03 — Bygg", "Färdig kod, innehåll och integrationer."],
+              ["04 — Lansering", "Domän, hosting och SEO på plats. Sedan kör vi."],
             ].map(([title, text]) => (
-              <li key={title} className="p-6 rounded-2xl border border-border bg-card flex gap-4">
-                <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-semibold">{title}</h4>
-                  <p className="text-muted-foreground text-sm mt-1">{text}</p>
-                </div>
+              <li key={title} className="p-5 rounded-lg border border-border bg-card">
+                <h4 className="font-semibold">{title}</h4>
+                <p className="text-muted-foreground text-sm mt-1">{text}</p>
               </li>
             ))}
           </ol>
@@ -165,28 +147,26 @@ const Index = () => {
       </section>
 
       {/* CTA */}
-      <section id="contact" className="py-24 border-t border-border">
-        <div className="container">
-          <div className="relative overflow-hidden rounded-3xl p-12 md:p-20 bg-hero-gradient shadow-glow text-center">
-            <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-primary-foreground">
-              Ready for a website that actually works?
-            </h2>
-            <p className="mt-6 text-lg text-primary-foreground/85 max-w-2xl mx-auto">
-              Get a free 20-minute consultation. I'll review your current site and share a clear plan to grow.
-            </p>
-            <div className="mt-10">
-              <Button asChild size="lg" variant="secondary" className="text-base">
-                <a href="mailto:hello@studiolumen.com">Email hello@studiolumen.com</a>
-              </Button>
-            </div>
+      <section id="kontakt" className="py-24">
+        <div className="container max-w-2xl text-center">
+          <h2 className="text-3xl md:text-5xl font-semibold tracking-tight">
+            Redo för en hemsida som faktiskt fungerar?
+          </h2>
+          <p className="mt-6 text-lg text-muted-foreground">
+            Boka ett gratis 20-minuterssamtal. Jag kollar din nuvarande sida och ger en tydlig plan framåt.
+          </p>
+          <div className="mt-10">
+            <Button asChild size="lg">
+              <a href="mailto:hej@tageshemsidor.se">Maila hej@tageshemsidor.se</a>
+            </Button>
           </div>
         </div>
       </section>
 
       <footer className="py-10 border-t border-border text-sm text-muted-foreground">
         <div className="container flex flex-wrap items-center justify-between gap-4">
-          <p>© {new Date().getFullYear()} Studio Lumen. Crafted with care.</p>
-          <p>hello@studiolumen.com</p>
+          <p>© {new Date().getFullYear()} Tage's Hemsidor</p>
+          <p>hej@tageshemsidor.se</p>
         </div>
       </footer>
     </div>

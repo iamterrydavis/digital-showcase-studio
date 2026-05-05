@@ -4,32 +4,32 @@ import { Wrench, Gauge, ShieldCheck, Phone, Clock, MapPin, CheckCircle2 } from "
 import heroImg from "@/assets/mechanic-hero.jpg";
 
 const services = [
-  { icon: Wrench, title: "Full-Service Repair", text: "Engine, transmission, brakes, suspension — we handle it all." },
-  { icon: Gauge, title: "Diagnostics", text: "Advanced computer diagnostics for every make and model." },
-  { icon: ShieldCheck, title: "2-Year Warranty", text: "Every repair backed by an industry-leading parts & labor warranty." },
+  { icon: Wrench, title: "Service & reparation", text: "Motor, växellåda, bromsar, fjädring — vi fixar allt." },
+  { icon: Gauge, title: "Felsökning", text: "Avancerad datordiagnostik för alla bilmärken." },
+  { icon: ShieldCheck, title: "2 års garanti", text: "Varje reparation täcks av vår garanti på delar och arbete." },
 ];
 
 const pricing = [
-  ["Oil & Filter Change", "$59"],
-  ["Brake Pad Replacement", "$179"],
-  ["Tire Rotation & Balance", "$49"],
-  ["Full Diagnostic Scan", "$89"],
-  ["A/C Recharge", "$129"],
-  ["State Inspection", "$35"],
+  ["Olje- och filterbyte", "595 kr"],
+  ["Bromsbeläggsbyte", "1 790 kr"],
+  ["Hjulskifte & balansering", "490 kr"],
+  ["Felsökning", "890 kr"],
+  ["AC-service", "1 290 kr"],
+  ["Kontrollbesiktning", "350 kr"],
 ];
 
 const Mechanic = () => (
-  <ShowcaseFrame themeClass="theme-mechanic" subdomain="apexauto.studiolumen.com" title="Apex Auto — Trusted Mechanics">
+  <ShowcaseFrame themeClass="theme-mechanic" subdomain="apexbil.tageshemsidor.se" title="Apex Bilverkstad — Pålitlig service">
     <header className="absolute top-9 inset-x-0 z-30">
       <div className="container flex items-center justify-between h-20 text-foreground">
         <div className="flex items-center gap-2">
           <div className="h-8 w-8 rounded-md bg-primary grid place-items-center"><Wrench className="h-4 w-4 text-primary-foreground" /></div>
-          <span className="font-bold text-xl tracking-tight">APEX AUTO</span>
+          <span className="font-bold text-xl tracking-tight">APEX BILVERKSTAD</span>
         </div>
         <nav className="hidden md:flex gap-8 text-sm font-medium uppercase">
-          <a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a>
+          <a href="#tjanster">Tjänster</a><a href="#priser">Priser</a><a href="#kontakt">Kontakt</a>
         </nav>
-        <Button className="bg-primary text-primary-foreground hover:opacity-90">Book Now</Button>
+        <Button className="bg-primary text-primary-foreground hover:opacity-90">Boka tid</Button>
       </div>
     </header>
 
@@ -37,23 +37,23 @@ const Mechanic = () => (
       <img src={heroImg} alt="" width={1600} height={1024} className="absolute inset-0 w-full h-full object-cover" />
       <div className="absolute inset-0 bg-hero-gradient" />
       <div className="container relative">
-        <span className="inline-block px-3 py-1 bg-primary text-primary-foreground text-xs font-bold uppercase tracking-wider">Family-owned since 1998</span>
+        <span className="inline-block px-3 py-1 bg-primary text-primary-foreground text-xs font-bold uppercase tracking-wider">Familjeägd sedan 1998</span>
         <h1 className="mt-6 text-5xl md:text-7xl font-black uppercase text-foreground leading-[0.95] max-w-4xl">
-          Honest repairs.<br /><span className="text-primary">Done right.</span>
+          Ärlig service.<br /><span className="text-primary">Gjord rätt.</span>
         </h1>
         <p className="mt-6 text-lg text-foreground/85 max-w-xl">
-          Certified technicians. Transparent pricing. Same-day service on most repairs. We treat your car like it's ours.
+          Certifierade tekniker. Tydliga priser. Samma dag-service på de flesta jobb. Vi tar hand om din bil som vår egen.
         </p>
         <div className="mt-10 flex gap-4">
-          <Button size="lg" className="bg-primary text-primary-foreground hover:opacity-90 font-bold">Schedule Service</Button>
-          <Button size="lg" variant="outline" className="border-foreground/40 text-foreground hover:bg-foreground/10">(555) 728-AUTO</Button>
+          <Button size="lg" className="bg-primary text-primary-foreground hover:opacity-90 font-bold">Boka service</Button>
+          <Button size="lg" variant="outline" className="border-foreground/40 text-foreground hover:bg-foreground/10">08-728 28 86</Button>
         </div>
       </div>
     </section>
 
-    <section id="services" className="py-24">
+    <section id="tjanster" className="py-24">
       <div className="container">
-        <h2 className="text-4xl md:text-5xl font-black uppercase text-center">What we fix</h2>
+        <h2 className="text-4xl md:text-5xl font-black uppercase text-center">Vad vi gör</h2>
         <div className="mt-14 grid md:grid-cols-3 gap-6">
           {services.map(({ icon: Icon, title, text }) => (
             <div key={title} className="p-8 bg-card border border-border rounded-xl border-t-4 border-t-primary">
@@ -66,11 +66,11 @@ const Mechanic = () => (
       </div>
     </section>
 
-    <section id="pricing" className="py-24 bg-secondary">
+    <section id="priser" className="py-24 bg-secondary">
       <div className="container max-w-4xl">
         <div className="text-center">
-          <h2 className="text-4xl md:text-5xl font-black uppercase">Up-front pricing</h2>
-          <p className="mt-4 text-muted-foreground">No surprises. No upsells. Just fair rates.</p>
+          <h2 className="text-4xl md:text-5xl font-black uppercase">Tydliga priser</h2>
+          <p className="mt-4 text-muted-foreground">Inga överraskningar. Bara rättvisa priser.</p>
         </div>
         <div className="mt-12 grid sm:grid-cols-2 gap-3">
           {pricing.map(([service, price]) => (
@@ -86,12 +86,12 @@ const Mechanic = () => (
       </div>
     </section>
 
-    <section id="contact" className="py-24">
+    <section id="kontakt" className="py-24">
       <div className="container grid md:grid-cols-3 gap-6">
         {[
-          { icon: MapPin, title: "Visit", text: "880 Industrial Pkwy" },
-          { icon: Clock, title: "Hours", text: "Mon–Fri 7am–6pm · Sat 8am–2pm" },
-          { icon: Phone, title: "Call", text: "(555) 728-2886" },
+          { icon: MapPin, title: "Besök", text: "Industrivägen 88" },
+          { icon: Clock, title: "Öppettider", text: "Mån–Fre 07–18 · Lör 08–14" },
+          { icon: Phone, title: "Ring", text: "08-728 28 86" },
         ].map(({ icon: Icon, title, text }) => (
           <div key={title} className="p-8 bg-card border border-border rounded-xl">
             <Icon className="h-6 w-6 text-primary" />
@@ -103,7 +103,7 @@ const Mechanic = () => (
     </section>
 
     <footer className="py-8 border-t border-border text-center text-sm text-muted-foreground">
-      © {new Date().getFullYear()} Apex Auto Repair · ASE Certified
+      © {new Date().getFullYear()} Apex Bilverkstad
     </footer>
   </ShowcaseFrame>
 );
