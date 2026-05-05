@@ -8,35 +8,43 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Portfolio (default) — dark premium tech */
+    --background: 230 35% 7%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 230 30% 10%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 230 30% 10%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 230 90% 62%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 250 95% 70%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 230 25% 15%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 230 25% 14%;
+    --muted-foreground: 220 15% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 270 90% 65%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 230 25% 18%;
+    --input: 230 25% 18%;
+    --ring: 230 90% 62%;
 
-    --radius: 0.5rem;
+    --radius: 0.85rem;
+
+    --gradient-hero: linear-gradient(135deg, hsl(230 90% 55%), hsl(270 90% 60%));
+    --gradient-subtle: linear-gradient(180deg, hsl(230 35% 7%), hsl(230 30% 10%));
+    --shadow-glow: 0 20px 60px -15px hsl(230 90% 55% / 0.5);
+    --shadow-card: 0 10px 40px -15px hsl(230 50% 3% / 0.6);
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
 
@@ -92,6 +100,94 @@ All colors MUST be HSL.
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+
+  /* ---- Showcase: Restaurant (Bella Notte) ---- */
+  .theme-restaurant {
+    --background: 20 25% 8%;
+    --foreground: 35 40% 95%;
+    --card: 20 22% 12%;
+    --card-foreground: 35 40% 95%;
+    --popover: 20 22% 12%;
+    --popover-foreground: 35 40% 95%;
+    --primary: 35 75% 55%;
+    --primary-foreground: 20 30% 8%;
+    --secondary: 20 20% 16%;
+    --secondary-foreground: 35 40% 95%;
+    --muted: 20 18% 16%;
+    --muted-foreground: 35 15% 70%;
+    --accent: 12 75% 50%;
+    --accent-foreground: 35 40% 95%;
+    --border: 20 20% 20%;
+    --input: 20 20% 20%;
+    --ring: 35 75% 55%;
+    --gradient-hero: linear-gradient(135deg, hsl(20 30% 8% / 0.85), hsl(20 30% 8% / 0.6));
+  }
+
+  /* ---- Showcase: Mechanic (Apex Auto) ---- */
+  .theme-mechanic {
+    --background: 220 15% 10%;
+    --foreground: 0 0% 98%;
+    --card: 220 12% 14%;
+    --card-foreground: 0 0% 98%;
+    --popover: 220 12% 14%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 45 100% 55%;
+    --primary-foreground: 220 30% 10%;
+    --secondary: 220 12% 18%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 220 10% 18%;
+    --muted-foreground: 220 10% 65%;
+    --accent: 0 85% 55%;
+    --accent-foreground: 0 0% 100%;
+    --border: 220 12% 22%;
+    --input: 220 12% 22%;
+    --ring: 45 100% 55%;
+    --gradient-hero: linear-gradient(135deg, hsl(220 30% 8% / 0.9), hsl(220 30% 8% / 0.5));
+  }
+
+  /* ---- Showcase: Store (Maison Modern) ---- */
+  .theme-store {
+    --background: 35 30% 96%;
+    --foreground: 25 25% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 25 25% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 25 25% 15%;
+    --primary: 22 45% 35%;
+    --primary-foreground: 35 30% 96%;
+    --secondary: 30 25% 90%;
+    --secondary-foreground: 25 25% 15%;
+    --muted: 30 20% 92%;
+    --muted-foreground: 25 15% 40%;
+    --accent: 18 55% 55%;
+    --accent-foreground: 0 0% 100%;
+    --border: 30 20% 85%;
+    --input: 30 20% 85%;
+    --ring: 22 45% 35%;
+    --gradient-hero: linear-gradient(135deg, hsl(35 30% 96% / 0.4), hsl(35 30% 96% / 0.85));
+  }
+
+  /* ---- Showcase: Cafe (Ember & Oak) ---- */
+  .theme-cafe {
+    --background: 30 25% 96%;
+    --foreground: 25 35% 18%;
+    --card: 30 30% 99%;
+    --card-foreground: 25 35% 18%;
+    --popover: 30 30% 99%;
+    --popover-foreground: 25 35% 18%;
+    --primary: 25 55% 32%;
+    --primary-foreground: 30 30% 96%;
+    --secondary: 30 22% 90%;
+    --secondary-foreground: 25 35% 18%;
+    --muted: 30 18% 92%;
+    --muted-foreground: 25 15% 40%;
+    --accent: 35 70% 50%;
+    --accent-foreground: 0 0% 100%;
+    --border: 30 18% 85%;
+    --input: 30 18% 85%;
+    --ring: 25 55% 32%;
+    --gradient-hero: linear-gradient(135deg, hsl(25 35% 12% / 0.7), hsl(25 35% 12% / 0.3));
+  }
 }
 
 @layer base {
@@ -101,5 +197,20 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "ss01", "cv11";
+  }
+}
+
+@layer utilities {
+  .bg-hero-gradient { background: var(--gradient-hero); }
+  .bg-subtle-gradient { background: var(--gradient-subtle); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+  .shadow-card-soft { box-shadow: var(--shadow-card); }
+  .transition-smooth { transition: var(--transition-smooth); }
+  .text-gradient {
+    background: var(--gradient-hero);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 }
